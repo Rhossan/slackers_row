@@ -8,7 +8,7 @@ const sessionReducer = (state = {id:null}, action) => {
     //*****receive current user with ID as key, nvm do that in user reducer..
       return { id : action.currentUser.id };
     case LOGOUT_USER:
-      return state;
+      return {id:null};
     default:
       return state;
   }
