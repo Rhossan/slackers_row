@@ -1,0 +1,127 @@
+/* color: #2c2d30;
+line-height: 1.5rem;
+do it on the body
+
+    background-color: #F9F9F9 encompass space outside of navbar login and footer
+*/
+/*
+background: #FFFFFF;
+margin: auto;
+border: 3px solid green;
+width: 59%;
+height: 503px;
+font-size: 2rem;
+line-height: 2.5rem;
+letter-spacing: -1px;
+font-weight: 500;
+font-family: cursive;
+font-family: 'Lato', sans-serif;
+margin: 0 0 1rem; */
+.login {
+  background-color: #F9F9F9;
+}
+.login-form-container {
+  background-color: #FFFFFF;
+  margin: auto;
+  border: 1px solid #e8e8e8;
+  width: 59%;
+  height: 503px;
+
+  line-height: 2.5rem;
+  letter-spacing: -1px;
+
+  font-family: 'Lato', sans-serif;
+  margin-top: 40px;
+  border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,.25);
+  padding: 2rem 2rem 1rem;
+  /* might need to change padding here */
+  position: relative;
+  top: 40px;
+
+}
+#signin_header {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  /* font-weight:bold; */
+}
+.login-form-container h1 {
+  text-align: center;
+  padding-top: 35px;
+  font-weight: 500;
+  font-size: 2rem;
+
+
+}
+
+.login-form-box {
+  /* text-align: center; */
+  margin:auto;
+  width: 59%;
+}
+
+.login-input{
+  display: block;
+   width: 100%;
+   height:100%;
+   border-radius: .25rem;
+   border: 1px solid #e8e8e8;
+}
+
+.session-submit{
+  display: block;
+   width: 100%;
+   height:100%;
+   border-radius: .25rem;
+   border: 1px solid #e8e8e8;
+   margin-top: 20px;
+   background-color: #008A55;
+   text-align: center;
+   color: white;
+}
+
+.label-login {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5em;
+}
+
+input.login-input{
+  /* padding-left: 10px; */
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.createSpace{
+  height: 10px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e8e8e8;
+    opacity: 1; /* Firefox */
+    font-weight: lighter;
+    padding-left: 10px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e8e8e8;
+    font-weight: lighter;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #e8e8e8;
+    font-weight: lighter;
+}
+
+/* #signin_header{
+  text-align: left;
+  margin: auto;
+  width: 50%;
+} */
+
+/* make login form main div
+need a navbar
+main for login
+and footer  */
