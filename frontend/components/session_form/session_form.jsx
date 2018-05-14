@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
     return e => this.setState({[field]: e.currentTarget.value});
   }
 
-  //todo, component will umount and clear all errors 
+  //todo, component will umount and clear all errors
 
   renderErrors() {
     return(

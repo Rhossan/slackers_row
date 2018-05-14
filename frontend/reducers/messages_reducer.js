@@ -8,8 +8,8 @@ const messages_reducer = (state = {}, action) => {
   // console.log("hellooo");
   switch (action.type) {
     case RECEIVE_CHANNEL:
-      // let messages = action.channel.messages;
-      return merge({}, state, action.channel.messages);
+      let messages = action.payload.messages;
+      return merge({}, state, messages);
     default:
       return state;
   }

@@ -6,7 +6,7 @@ import Root from './components/root';
 import {createUser, loginUser, logoutUser} from './util/session_api_util';
 import {login,create, logout} from './actions/session_actions';
 import {fetchSingleChannel, createChannel} from './util/channel_api_util';
-import {requestChannel,makeChannel} from './actions/channel_actions';
+import {requestChannel,makeChannel,requestAllChannels} from './actions/channel_actions';
 import {createMessage} from './util/message_api_util';
 import {makeMessage} from './actions/message_actions';
 
@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
+  window.requestAllChannels = requestAllChannels;
   window.createMessage = createMessage;
   window.dispatch = store.dispatch;
   window.requestChannel = requestChannel;

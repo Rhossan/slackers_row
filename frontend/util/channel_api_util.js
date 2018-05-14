@@ -1,9 +1,9 @@
-// export const fetchAllChannels = () => (
-//   $.ajax({
-//     method: 'GET',
-//     url: 'api/channel'
-//   })
-// );
+export const fetchAllChannels = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/channels'
+  })
+);
 // since we dont care about the index
 
 export const fetchSingleChannel = id => (
