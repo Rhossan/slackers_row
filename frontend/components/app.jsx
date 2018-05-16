@@ -13,17 +13,20 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container'
 import SignupFormContainer from './session_form/signup_form_container'
 import SidebarContainer from './side_bar/side_bar_container';
+import ChannelDetailContainer from './channel/channel_detail_container';
 
 const App = () => (
   <div>
     <header>
       <h1>SlackersRow</h1>
       <GreetingContainer />
-      <SidebarContainer />
     </header>
 
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
+
+    <SidebarContainer />
+    <Route path="/channel/:channelId" component={ChannelDetailContainer}/>
 
   </div>
 );

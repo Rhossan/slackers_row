@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  window.requestAllChannels = requestAllChannels;
-  window.createMessage = createMessage;
-  window.dispatch = store.dispatch;
-  window.requestChannel = requestChannel;
-  window.makeChannel = makeChannel;
-  window.makeMessage = makeMessage;
+  // window.requestAllChannels = requestAllChannels;
+  // window.createMessage = createMessage;
+  // window.dispatch = store.dispatch;
+  // window.requestChannel = requestChannel;
+  // window.makeChannel = makeChannel;
+  // window.makeMessage = makeMessage;
   // window.fetchSingleChannel = fetchSingleChannel;
   // window.createChannel = createChannel;
   // const store = configureStore();

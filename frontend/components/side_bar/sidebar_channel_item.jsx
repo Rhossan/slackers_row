@@ -1,10 +1,10 @@
-
+import {Link} from 'react-router-dom';
 import React from 'react';
 
 const ChannelItem = ({channel}) => {
   return (
     <li>
-      <a href="#">{channel.name}</a>
+     <Link to={`/channel/${channel.id}`}> {channel.name} </Link>
     </li>
   );
 };
