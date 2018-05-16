@@ -7,8 +7,12 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
 
-  # has_many :messages,
-  #   foreign_key: :user_id
+  has_many :memberships,
+    foreign_key: :owner_id
+
+  has_many :channels,
+    through: :memberships,
+    source: :channel
   #
   # has_many :posts,
   #   foreign_key: :post_id

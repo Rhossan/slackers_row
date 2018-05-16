@@ -9,12 +9,12 @@ class Channel < ApplicationRecord
 
   has_many :messages
 
-  # has_many :members,
-  # class: :Membership
+  has_many :members,
+  class: :Membership
 
-  # has_many :users,
-  # through: :members,
-  # source: :membership
+  has_many :users,
+  through: :members,
+  source: :membership
 
 
 
