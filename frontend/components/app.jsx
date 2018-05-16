@@ -7,7 +7,7 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container'
@@ -18,15 +18,20 @@ import ChannelDetailContainer from './channel/channel_detail_container';
 const App = () => (
   <div>
     <header>
+      <Link to="/" className="header-link">
       <h1>SlackersRow</h1>
+      </Link>
       <GreetingContainer />
     </header>
 
-    <AuthRoute exact path="/login" component={LoginFormContainer} />
-    <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <Switch>
+      <Route exact path="/" component={GreetingContainer} />
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    </Switch>
+    <ProtectedRoute path="/main" component={SidebarContainer}/>
+    <ProtectedRoute path="/main/:channelId" component={ChannelDetailContainer}/>
 
-    <SidebarContainer />
-    <Route path="/channel/:channelId" component={ChannelDetailContainer}/>
 
   </div>
 );

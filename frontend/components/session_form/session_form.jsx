@@ -18,6 +18,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+    // this.props.history.replace(`${this.props.user.id}`);
   }
 
   update(field) {
@@ -45,8 +46,9 @@ class SessionForm extends React.Component {
       );
     }
     return (
+  <div>
     <div className="login">
-      Please {this.props.formType} or {this.props.navLink}
+
       <div className="login-form-container">
         <h1><b>Sign in to Slackers Row</b></h1>
         <br/>
@@ -80,13 +82,17 @@ class SessionForm extends React.Component {
 
 
           </div>
+          <a href={this.props.navLink}><h1 id="signup_header">You can {this.props.navLink} <b>here</b></h1></a>
         </form>
+
       </div>
     </div>
+    <div className="image-background"></div>
+  </div>
     );
   }
 }
 
 // {this.renderErrors()}
-
+  // <img src="../../../app/assets/images/home_illo.png"/>
 export default withRouter(SessionForm);
