@@ -61,7 +61,7 @@ input.message-input{
 .main {
   margin-left: 220px;
   /* height: calc(100% - 330px); */
-  margin-bottom: 65px; */
+  margin-bottom: 65px; 
   background-color: #FFF;
   overflow: auto;
 }
