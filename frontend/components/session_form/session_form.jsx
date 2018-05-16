@@ -82,7 +82,7 @@ class SessionForm extends React.Component {
 
 
           </div>
-          <a href={this.props.navLink}><h1 id="signup_header">You can {this.props.navLink} <b>here</b></h1></a>
+          <h1 id="signup_header">You can <b>{this.props.navLink}</b> </h1>
         </form>
 
       </div>
