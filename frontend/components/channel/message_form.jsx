@@ -6,18 +6,17 @@ class MessageForm extends React.Component {
     super(props);
     this.state = {
       body: "",
-      channel_id: props.channelId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    
-    // const user = Object.assign({}, this.state);
-    // if (e.keyCode === 13)
-      this.props.makeMessage(this.state);
-      this.setState({body:""});
+
+    const message = Object.assign({}, this.state, { channel_id: this.props.channelId });
+
+    this.props.makeMessage(message); //this.state
+    this.setState({ body:"" });
   }
 
   update(field) {

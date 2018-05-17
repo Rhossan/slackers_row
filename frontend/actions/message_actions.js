@@ -8,9 +8,5 @@ export const receiveMessage = (payload) => {
 };
 
 export const makeMessage = (message) => dispatch => {
-  return createMessage(message).then(payload => {
-    return dispatch(receiveMessage(payload));
-  }), err => {
-    return dispatch(receiveErrors(err.responseJSON));
-  };
+  return createMessage(message)
 }

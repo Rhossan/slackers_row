@@ -21,7 +21,6 @@ const App = () => (
       <Link to="/" className="header-link">
       <h1>SlackersRow</h1>
       </Link>
-      <GreetingContainer />
     </header>
 
     <Switch>
