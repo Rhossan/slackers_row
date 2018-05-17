@@ -40,10 +40,12 @@ channel2 = Channel.create! (
 
 Message.create! (
   {channel_id: channel1.id,
-  body: "hello cruel world"}
+  body: "hello cruel world",
+  username: "Charlie"}
 )
 
 Message.create! (
   {channel_id: channel2.id,
-  body: "Does this app even work?"}
+  body: "Does this app even work?",
+  username: "Drake"}
 )

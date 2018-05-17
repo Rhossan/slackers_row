@@ -4,8 +4,9 @@ class MessageForm extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
-      body: "",
+      body: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -13,8 +14,8 @@ class MessageForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const message = Object.assign({}, this.state, { channel_id: this.props.channelId });
-
+    const message = Object.assign({}, this.state, { channel_id: this.props.channelId, username: this.props.currentUser.username });
+    debugger
     this.props.makeMessage(message); //this.state
     this.setState({ body:"" });
   }

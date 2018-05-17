@@ -20,9 +20,13 @@ const Greeting = ({currentUser, logout}) => {
       </div>
   );
 
-  if(currentUser) {return (<Redirect to='/main'/>)} else { return (<Redirect to='/login'/>)};
+  if(currentUser) {
+    return (<Redirect to='/main'/>)
+  } else {
+    return (<Redirect to='/login'/>)
+  };
 };
-
+// ****** might need to come back here
 
 export default Greeting;
 

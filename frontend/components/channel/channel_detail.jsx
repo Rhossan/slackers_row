@@ -48,7 +48,7 @@ class ChannelDetail extends Component {
 
   render(){
     const messages = this.props.messages.map(message => {
-        return message ? <li>{message.channel_id} {message.body}</li> : 'blah'
+        return message ? <div><div className="lol">{message.username}{message.created_at}</div><li>{message.body}</li></div> : 'blah'
       });
 
     return (
@@ -58,7 +58,7 @@ class ChannelDetail extends Component {
             {messages}
           </ul>
         </div>
-        <MessageForm makeMessage={this.props.makeMessage} channelId={this.props.match.params.channelId} />
+        <MessageForm currentUser={this.props.currentUser} makeMessage={this.props.makeMessage} channelId={this.props.match.params.channelId} />
       </div>
 
 

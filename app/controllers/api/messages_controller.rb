@@ -1,6 +1,5 @@
 class Api::MessagesController < ApplicationController
   def create
-
     @message = Message.new(message_params)
 
     if @message.save
@@ -18,6 +17,6 @@ class Api::MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:channel_id, :body)
+    params.require(:message).permit(:channel_id, :body, :username)
   end
 end
