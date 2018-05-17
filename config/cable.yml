@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:39f5b02740d037c54a08ed9046bbbf11@cod.redistogo.com:9421/
   channel_prefix: SlackersRow_production

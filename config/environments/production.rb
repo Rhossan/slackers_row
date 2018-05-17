@@ -88,4 +88,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #set up cable server's URI for production
+  config.web_socket_server_url = "wss://slackers-row.herokuapp.com/cable"
+
+  config.action_cable.allowed_request_origins = ['https://slackers-row.herokuapp.com', 'http://slackers-row.herokuapp.com']
 end
