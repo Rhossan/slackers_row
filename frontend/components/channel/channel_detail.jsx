@@ -3,10 +3,15 @@ import { Route } from 'react-router-dom';
 import MessageForm from './message_form';
 
 class ChannelDetail extends Component {
-  componentDidMount(){
-    this.props.requestChannel(this.props.match.params.channelId);
 
-  };
+  componentDidMount() {
+   this.props.requestChannel(this.props.match.params.channelId);
+   this.subscription = App.cable.subscriptions.create(
+     {channel: 'ChatChannel', id: this.props.match.params.channelId},
+     {received: (message) => this.props.receiveMessage(message)}
+   );
+   
+ }
 
   componentDidUpdate(){
     window.scroll(0,10000000);

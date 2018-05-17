@@ -4,7 +4,8 @@ class Api::MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      render :show
+      ChatChannel.broadcast_to(@message.channel, JSON.parse(render('/api/messages/_message.json.jbuilder', locals: {message: @message})))
+      head :ok
     else
       render json: @message.errors.full_messages, status: 422
     end
