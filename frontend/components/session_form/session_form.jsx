@@ -47,6 +47,7 @@ class SessionForm extends React.Component {
     }
     return (
   <div>
+    <div className="image-logo-login"></div>
     <div className="login">
 
       <div className="login-form-container">

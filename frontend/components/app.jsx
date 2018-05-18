@@ -19,7 +19,6 @@ const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link">
-      <h1>SlackersRow</h1>
       </Link>
     </header>
 

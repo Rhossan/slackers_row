@@ -6,6 +6,7 @@ import {requestChannel} from '../../actions/channel_actions';
 import {makeMessage, receiveMessage} from '../../actions/message_actions';
 
 const mapStateToProps = (state, ownProps) => {
+   
   const channel = state.entities.channels[ownProps.match.params.channelId] || { message_ids: [] };
   return {
     channel,

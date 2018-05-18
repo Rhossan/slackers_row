@@ -6,7 +6,6 @@ class ChannelDetail extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.channelId !== nextProps.match.params.channelId) {
-
       this.props.requestChannel(nextProps.match.params.channelId);
       this.subscription.unsubscribe();
       this.subscription = App.cable.subscriptions.create(
@@ -48,7 +47,7 @@ class ChannelDetail extends Component {
   render(){
     const messages = this.props.messages.map(message => {
         return message ?
-        <div>
+        <div className="block_message">
           <div className="header_message">
             <div className="name_label_message">
               {message.username}
@@ -66,6 +65,7 @@ class ChannelDetail extends Component {
     return (
       <div>
         <div className="main">
+          <div className="image-logo"></div>
           <ul className="message-list">
             {messages}
           </ul>
