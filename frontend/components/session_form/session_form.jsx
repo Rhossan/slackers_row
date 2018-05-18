@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
 
       <div className="login-form-container">
         <h1><b>Sign in to Slackers Row</b></h1>
-        <br/>
+
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
 

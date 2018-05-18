@@ -13,9 +13,10 @@
 .sidebar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 20px;
+    color: floralwhite;
     display: block;
+    font-family: 'Lato', sans-serif;
 }
 
 /* .sidebar a:active{
@@ -23,5 +24,9 @@
 } */
 
 .sidebar a:hover {
-    color: #f1f1f1;
+    background: #947791;
+}
+
+ul.channel-list{
+  padding-left: 15px;
 }

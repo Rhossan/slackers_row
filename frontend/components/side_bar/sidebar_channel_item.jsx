@@ -4,7 +4,7 @@ import React from 'react';
 const ChannelItem = ({channel}) => {
   return (
     <li>
-     <Link to={`/main/${channel.id}`}> {channel.name} </Link>
+     <Link to={`/main/${channel.id}`}> # {channel.name} </Link>
     </li>
   );
 };

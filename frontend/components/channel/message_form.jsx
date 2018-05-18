@@ -44,7 +44,7 @@ class MessageForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <label className="label-message">
               <input type="text"
-                placeholder="Message"
+                placeholder={`#${this.props.channelName}`}
                 value={this.state.body}
                 className="message-input"
                 onChange={this.update('body')}
@@ -57,54 +57,5 @@ class MessageForm extends React.Component {
   }
 }
 
-
-// render(){
-//   const loginTemplate = () => {
-//     return (
-//       <h1>ss</h1>
-//     );
-//   }
-//   return (
-//   <div className="login">
-//     Please {this.props.formType} or {this.props.navLink}
-//     <div className="login-form-container">
-//       <h1><b>Sign in to Slackers Row</b></h1>
-//       <br/>
-//
-//       <form onSubmit={this.handleSubmit} className="login-form-box">
-//
-//         <div className="login-form">
-//           <h1 id="signin_header"> Enter your <b>username</b> and <b>password</b></h1>
-//
-//           <label className="label-login">
-//             <input type="text"
-//               placeholder="username"
-//               value={this.state.username}
-//               onChange={this.update('username')}
-//               className="login-input"
-//             />
-//           </label>
-//           <div className="createSpace"></div>
-//           <label className="label-login">
-//             <input type="password"
-//               placeholder="password"
-//               value={this.state.password}
-//               onChange={this.update('password')}
-//               className='login-input'
-//             />
-//           </label>
-//
-//           <label className="label-login">
-//             <input className="session-submit" type="submit" value={this.props.formType} />
-//           </label>
-//
-//
-//         </div>
-//       </form>
-//     </div>
-//   </div>
-//   );
-// }
-// {this.renderErrors()}
 
 export default (MessageForm);

@@ -74,7 +74,7 @@ class ChannelDetail extends Component {
             {messages}
           </ul>
         </div>
-        <MessageForm currentUser={this.props.currentUser} makeMessage={this.props.makeMessage} channelId={this.props.match.params.channelId} />
+        <MessageForm currentUser={this.props.currentUser} makeMessage={this.props.makeMessage} channelId={this.props.match.params.channelId} channelName={this.props.channel.name} />
       </div>
 
 

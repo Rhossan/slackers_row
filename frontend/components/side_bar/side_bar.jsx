@@ -15,12 +15,14 @@ class Sidebar extends Component{
     return (
       <div>
         <div className="sidebar">
-          <a href="#">{this.props.currentUser.username}</a>
+          <a href="#">Welcome, {this.props.currentUser.username}</a>
           <a href="#"><button onClick={this.props.logout}>Log Out</button></a>
-          <a href="#">Channels</a>
-          <ul>
-            {channels}
-          </ul>
+          <div className="channel-div">
+            <a href="#">Channels</a>
+            <ul className="channel-list">
+              {channels}
+            </ul>
+          </div>
         </div>
 
 
