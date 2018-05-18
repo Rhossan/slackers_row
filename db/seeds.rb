@@ -11,6 +11,10 @@ Message.delete_all
 Channel.delete_all
 User.delete_all
 
+user = User.create!(
+  username: "Demo_User",
+  password: "password"
+)
 user1 = User.create! (
   {username: "Charlie",
   password: "starwars"}

@@ -82,7 +82,9 @@ class SessionForm extends React.Component {
             </label>
 
           </div>
-          <h1 id="signup_header">You can <b>{this.props.navLink}</b> </h1>
+          <div><h1 id="signup_header">You can <b>{this.props.navLink}</b></h1>
+            <button className="demo-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>DEMO USER</button>
+          </div>
         </form>
 
       </div>

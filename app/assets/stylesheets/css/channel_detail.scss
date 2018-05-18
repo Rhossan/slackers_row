@@ -4,6 +4,22 @@
     margin-right: 100px;
 }
 
+.body_content{
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.header_message {
+  display: flex;
+}
+
+.profile_pic{
+  display: inline-block;
+  background-image: image-url("default_avatar.png");
+  height: 75px;
+  width: 75px;
+
+}
 .name_label_message{
   display: inline-block;
   line-height: 1;
@@ -20,6 +36,7 @@
 }
 .block_message{
   margin-left: 10px;
+  padding-bottom: 10px;
 }
 .block_message:hover {
     background: #f1f1f1;
@@ -27,11 +44,15 @@
 }
 
 .image-logo{
-  float: right;
+  margin-left: 75%;
+  position: fixed;
+  // bottom: 0px;
+  // float: right;
+  //position: relative;
   height: 80px;
   width: 200px;
   // border-top: 200px;
   background-image: image-url("logo.png");
-  position: relative;
-  bottom: 0px;
+
+
 }

@@ -49,17 +49,21 @@ class ChannelDetail extends Component {
         return message ?
         <div className="block_message">
           <div className="header_message">
-            <div className="name_label_message">
-              {message.username}
-            </div>
-            <div className="time_label_message">
-              {message.created_at}
+            <div className="profile_pic"></div>
+            <div className="body_content">
+              <div className="name_label_message">
+                {message.username}
+              </div>
+              <div className="time_label_message">
+                {message.created_at}
+              </div>
+              <div className="content_message">
+                <li>{message.body}</li>
+              </div>
             </div>
           </div>
-          <div className="content_message">
-            <li>{message.body}</li>
-          </div>
-        </div> : 'blah'
+
+        </div> : ''
       });
 
     return (
