@@ -1,0 +1,19 @@
+.main {
+    margin-left: 220px;
+    font-size: 28px;
+}
+
+.name_label_message{
+  display: inline-block;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.time_label_message{
+  margin-left: 5px;
+  display: inline-block;
+  font-size: 12px;
+  color: #717274;
+  line-height: 1;
+}

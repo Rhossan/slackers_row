@@ -9,10 +9,9 @@ class ChannelDetail extends Component {
 
       this.props.requestChannel(nextProps.match.params.channelId);
       this.subscription.unsubscribe();
-      debugger
       this.subscription = App.cable.subscriptions.create(
         {channel: 'ChatChannel', id: nextProps.match.params.channelId},
-        {received: (message) => {debugger; this.props.receiveMessage(message)}}
+        {received: (message) => {this.props.receiveMessage(message)}}
       );
     }
 
@@ -34,7 +33,7 @@ class ChannelDetail extends Component {
    this.props.requestChannel(this.props.match.params.channelId);
    this.subscription = App.cable.subscriptions.create(
      {channel: 'ChatChannel', id: this.props.match.params.channelId},
-     {received: (message) => {debugger;this.props.receiveMessage(message)}}
+     {received: (message) => {this.props.receiveMessage(message)}}
    );
  }
 
@@ -48,7 +47,20 @@ class ChannelDetail extends Component {
 
   render(){
     const messages = this.props.messages.map(message => {
-        return message ? <div><div className="lol">{message.username}{message.created_at}</div><li>{message.body}</li></div> : 'blah'
+        return message ?
+        <div>
+          <div className="header_message">
+            <div className="name_label_message">
+              {message.username}
+            </div>
+            <div className="time_label_message">
+              {message.created_at}
+            </div>
+          </div>
+          <div className="content_message">
+            <li>{message.body}</li>
+          </div>
+        </div> : 'blah'
       });
 
     return (

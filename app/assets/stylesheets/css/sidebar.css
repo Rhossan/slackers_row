@@ -18,6 +18,10 @@
     display: block;
 }
 
+/* .sidebar a:active{
+  background: #4C9689;
+} */
+
 .sidebar a:hover {
     color: #f1f1f1;
 }
