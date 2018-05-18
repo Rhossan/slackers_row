@@ -22,16 +22,18 @@ const App = () => (
       </Link>
     </header>
 
+
     <Switch>
-      <Route exact path="/" component={GreetingContainer} />
+      <AuthRoute exact path="/" component={GreetingContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    </Switch>
-    <ProtectedRoute path="/main" component={SidebarContainer}/>
-    <ProtectedRoute path="/main/:channelId" component={ChannelDetailContainer}/>
+      <ProtectedRoute path="/main" component={SidebarContainer}/>
+  </Switch>
+  <ProtectedRoute path="/main/:channelId" component={ChannelDetailContainer}/>
 
 
   </div>
 );
 
 export default App;
+// <Route exact path="/" component={GreetingContainer} />

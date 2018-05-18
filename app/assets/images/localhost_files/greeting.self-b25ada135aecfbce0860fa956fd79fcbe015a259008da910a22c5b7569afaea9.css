@@ -1,0 +1,58 @@
+/* line 1, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/greeting.scss */
+.navbar {
+  position: absolute;
+  padding: 0;
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+  z-index: 1000;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+/* line 13, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/greeting.scss */
+.splash-text {
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #5b5e6d;
+  max-width: 44rem;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* line 25, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/greeting.scss */
+.splash-title {
+  font-size: 4.8rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: normal;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  margin-left: 0;
+  max-width: 14em;
+}
+
+/* line 36, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/greeting.scss */
+.splash-body {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+/* line 40, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/greeting.scss */
+.splash-content {
+  margin-top: 200px;
+  display: flex;
+}
+
+/* line 45, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/greeting.scss */
+.splash-image {
+  display: inline-block;
+  height: 600px;
+  width: 700px;
+  background-image: url(/assets/home-59f2e7f3068afb09537cdc49d4f0b8ba7a5ff19e58c7ff9a23341fc7ac6f8659.png);
+  position: relative;
+  bottom: 0px;
+}

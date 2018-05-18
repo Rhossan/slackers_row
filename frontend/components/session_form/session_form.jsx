@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
 
       </div>
     </div>
-    <div className="image-background"></div>
+
   </div>
     );
   }

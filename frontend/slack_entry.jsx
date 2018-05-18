@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
+  window.store = store;
   // window.requestAllChannels = requestAllChannels;
   // window.createMessage = createMessage;
   // window.dispatch = store.dispatch;
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.dispatch = store.dispatch;
   // window.login = login;
   // window.create = create;
-  // window.logout = logout;
+  window.logout = logout;
   // window.loginUser = loginUser;
   // window.logoutUser = logoutUser;
   // window.createUser = createUser;

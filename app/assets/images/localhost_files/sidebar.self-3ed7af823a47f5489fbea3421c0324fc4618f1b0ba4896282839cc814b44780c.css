@@ -1,0 +1,32 @@
+.sidebar {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #4D384A;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: floralwhite;
+    display: block;
+    font-family: 'Lato', sans-serif;
+}
+
+/* .sidebar a:active{
+  background: #4C9689;
+} */
+
+.sidebar a:hover {
+    background: #947791;
+}
+
+ul.channel-list{
+  padding-left: 15px;
+}

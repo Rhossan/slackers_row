@@ -1,0 +1,159 @@
+/* line 1, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.image-logo-login {
+  float: left;
+  height: 80px;
+  width: 200px;
+  background-image: url(/assets/logo_reverse-61f7186de88bb1e9e9cc793a0bf3661d4f81ba98cd351a702474d6a663106a3c.png);
+  position: fixed;
+}
+
+/* line 8, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.image-background {
+  height: 500px;
+  width: 700px;
+  background-image: url(/assets/home-59f2e7f3068afb09537cdc49d4f0b8ba7a5ff19e58c7ff9a23341fc7ac6f8659.png);
+  position: relative;
+  bottom: 0px;
+}
+
+/* line 16, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.login {
+  background-color: #FFF;
+}
+
+/* line 19, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.login-form-container {
+  background-color: #FFFFFF;
+  margin: auto;
+  border: 1px solid #e8e8e8;
+  width: 59%;
+  height: 503px;
+  line-height: 2.5rem;
+  letter-spacing: -1px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 40px;
+  border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  padding: 2rem 2rem 1rem;
+  /* might need to change padding here */
+  position: relative;
+}
+
+/* line 39, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+#signup_header {
+  text-align: left;
+  font-size: 1.5rem;
+  bottom: 0px;
+}
+
+/* line 44, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+#signin_header {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  /* font-weight:bold; */
+}
+
+/* line 50, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.login-form-container h1 {
+  text-align: center;
+  padding-top: 35px;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/* line 59, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.login-form-box {
+  /* text-align: center; */
+  margin: auto;
+  width: 59%;
+}
+
+/* line 65, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.login-input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: .25rem;
+  border: 1px solid #e8e8e8;
+}
+
+/* line 73, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.session-submit {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: .25rem;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+  background-color: #008A55;
+  text-align: center;
+  color: white;
+}
+
+/* line 85, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.demo-submit {
+  display: block;
+  width: 100%;
+  height: 80%;
+  border-radius: .25rem;
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+  background-color: #00178a;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 99, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.label-login {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5em;
+}
+
+/* line 106, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+input.login-input {
+  /* padding-left: 10px; */
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+/* line 112, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+.createSpace {
+  height: 10px;
+}
+
+/* line 116, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #e8e8e8;
+  opacity: 1;
+  /* Firefox */
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+/* line 123, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #e8e8e8;
+  font-weight: lighter;
+}
+
+/* line 128, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/login_page.scss */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #e8e8e8;
+  font-weight: lighter;
+}
+
+/* #signin_header{
+  text-align: left;
+  margin: auto;
+  width: 50%;
+} */
+/* make login form main div
+need a navbar
+main for login
+and footer  */

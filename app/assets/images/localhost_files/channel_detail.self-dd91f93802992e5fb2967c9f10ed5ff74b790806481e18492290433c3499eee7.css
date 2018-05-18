@@ -1,0 +1,68 @@
+/* line 1, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.main {
+  margin-left: 220px;
+  font-size: 28px;
+  margin-right: 100px;
+}
+
+/* line 7, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.content_message {
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 11, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.body_content {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+/* line 16, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.header_message {
+  display: flex;
+}
+
+/* line 20, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.profile_pic {
+  display: inline-block;
+  background-image: url(/assets/default_avatar-7a32bd134921af247bd17cea09637b51e42b6453712d9605051ece274dc82fbb.png);
+  height: 75px;
+  width: 75px;
+}
+
+/* line 27, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.name_label_message {
+  display: inline-block;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 34, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.time_label_message {
+  margin-left: 5px;
+  display: inline-block;
+  font-size: 12px;
+  color: #717274;
+  line-height: 1;
+}
+
+/* line 41, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.block_message {
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 45, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.block_message:hover {
+  background: #f1f1f1;
+  margin-left: 20px;
+}
+
+/* line 50, /Users/raquibhossain/Desktop/slackers_row/app/assets/stylesheets/css/channel_detail.scss */
+.image-logo {
+  margin-left: 75%;
+  position: fixed;
+  height: 80px;
+  width: 200px;
+  background-image: url(/assets/logo-84e434c72e9afe9e4a28aa81f96fed1d01f9bbf0ce63c849f87152ce1d7a7ba2.png);
+}
