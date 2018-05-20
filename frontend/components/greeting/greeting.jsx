@@ -30,7 +30,7 @@ class Greeting extends React.Component {
       </div>
     )
   }
-
+}
 
 // ****** might need to come back here
 
