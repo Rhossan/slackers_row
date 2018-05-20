@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 // import App from './components/app';
-import {createUser, loginUser, logoutUser} from './util/session_api_util';
-import {login,create, logout} from './actions/session_actions';
-import {fetchSingleChannel, createChannel} from './util/channel_api_util';
-import {requestChannel,makeChannel,requestAllChannels} from './actions/channel_actions';
-import {createMessage} from './util/message_api_util';
-import {makeMessage} from './actions/message_actions';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,23 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.store = store;
-  // window.requestAllChannels = requestAllChannels;
-  // window.createMessage = createMessage;
-  // window.dispatch = store.dispatch;
-  // window.requestChannel = requestChannel;
-  // window.makeChannel = makeChannel;
-  // window.makeMessage = makeMessage;
-  // window.fetchSingleChannel = fetchSingleChannel;
-  // window.createChannel = createChannel;
-  // const store = configureStore();
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // window.login = login;
-  // window.create = create;
-  window.logout = logout;
-  // window.loginUser = loginUser;
-  // window.logoutUser = logoutUser;
-  // window.createUser = createUser;
+
   ReactDOM.render(<Root store={store}/>, root);
 });
