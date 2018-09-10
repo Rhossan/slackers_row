@@ -5,7 +5,6 @@ const sessionReducer = (state = {id:null}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-    //*****receive current user with ID as key, nvm do that in user reducer..
       return { id : action.currentUser.id };
     case LOGOUT_USER:
       return {id:null};

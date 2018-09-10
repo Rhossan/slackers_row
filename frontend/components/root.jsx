@@ -8,8 +8,6 @@ export default class Root extends Component {
     super(props)
   }
 
-
-
   render() {
 
     return (

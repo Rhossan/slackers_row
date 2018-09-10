@@ -4,7 +4,6 @@ export const fetchAllChannels = () => (
     url: 'api/channels'
   })
 );
-// since we dont care about the index
 
 export const fetchSingleChannel = id => (
   $.ajax({
@@ -20,6 +19,3 @@ export const createChannel = (channel) => {
     data: { channel }
   });
 };
-
-
-//need to do destroy later

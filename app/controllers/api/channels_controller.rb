@@ -20,7 +20,6 @@ class Api::ChannelsController < ApplicationController
   end
 
   def destroy
-    # need to use this later, not a priority now
     @channel = Channel.find(params[:id])
     @channel.destroy
 

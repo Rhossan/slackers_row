@@ -10,8 +10,5 @@ const ChannelItem = ({channel}) => {
 };
 
 
+
 export default ChannelItem;
-
-
-//make sure your replace link with actual link to getting that
-// channel with all its messages
