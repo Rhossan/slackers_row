@@ -6,7 +6,6 @@ class ChannelDetail extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.channelId !== nextProps.match.params.channelId) {
-      this.props.requestAllChannels();
       this.props.requestChannel(nextProps.match.params.channelId);
       this.subscription.unsubscribe();
       this.subscription = App.cable.subscriptions.create(
@@ -18,7 +17,6 @@ class ChannelDetail extends Component {
 
 
  componentDidMount(){
-   this.props.requestAllChannels();
    this.props.requestChannel(this.props.match.params.channelId);
    this.subscription = App.cable.subscriptions.create(
      {channel: 'ChatChannel', id: this.props.match.params.channelId},
