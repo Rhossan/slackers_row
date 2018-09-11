@@ -14,8 +14,6 @@ class ChannelDetail extends Component {
         {received: (message) => {this.props.receiveMessage(message)}}
       );
     }
-
-
   }
 
 
