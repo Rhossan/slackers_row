@@ -41,6 +41,13 @@
   font-size: 1.5rem;
   bottom:0px;
 }
+
+#signup_header span{
+  color:blue;
+}
+#signup_header span:hover{
+  text-decoration: underline;
+}
 #signin_header {
   text-align: left;
   font-size: 1.5rem;

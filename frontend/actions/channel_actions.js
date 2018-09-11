@@ -10,8 +10,6 @@ export const receiveErrors = errors => ({
 });
 
 export const requestChannel = (id) => dispatch => {
-  // dispatch(startLoadingSingleChannel());
-
   return fetchSingleChannel(id).then(payload => {
     return dispatch({type: RECEIVE_CHANNEL, payload});
   }), err => {

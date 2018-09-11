@@ -20,24 +20,3 @@ export default class Root extends Component {
   }
 
 }
-
-// componentWillMount() {
-//
-//   // store.dispatch(setMessages(this.props.messages));
-//
-//   if (typeof App !== 'undefined'){
-//     App.chat = App.cable.subscriptions.create("ChatChannel", {
-//       connected: function() {},
-//       disconnected: function() {},
-//       received: function(data) {
-//         return store.dispatch(makeMessage(data['message']));
-//       },
-//       speak: function(message) {
-//         return this.perform('speak', {
-//           message: message
-//         });
-//       }
-//     });
-//   }
-//
-// }

@@ -7,7 +7,6 @@ import {makeMessage, receiveMessage} from '../../actions/message_actions';
 import {requestAllChannels} from '../../actions/channel_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const channel = state.entities.channels[ownProps.match.params.channelId] || { message_ids: [] };
   const messages = selectChannelMessages(state,channel)
   return {

@@ -18,14 +18,11 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    // this.props.history.replace(`${this.props.user.id}`);
   }
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
   }
-
-  //todo, component will umount and clear all errors
 
   renderErrors() {
     return(
@@ -82,7 +79,7 @@ class SessionForm extends React.Component {
             </label>
 
           </div>
-          <div><h1 id="signup_header">You can <b>{this.props.navLink}</b></h1>
+          <div><h1 id="signup_header">You can <span>{this.props.navLink}</span></h1>
             <button className="demo-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>DEMO USER</button>
           </div>
         </form>
@@ -95,6 +92,4 @@ class SessionForm extends React.Component {
   }
 }
 
-// {this.renderErrors()}
-  // <img src="../../../app/assets/images/home_illo.png"/>
 export default withRouter(SessionForm);

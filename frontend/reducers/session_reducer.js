@@ -1,5 +1,4 @@
 import { RECEIVE_CURRENT_USER, LOGOUT_USER } from '../actions/session_actions';
-//*********state is not null?
 const sessionReducer = (state = {id:null}, action) => {
 
   Object.freeze(state);

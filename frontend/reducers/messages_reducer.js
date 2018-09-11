@@ -5,14 +5,9 @@ import { RECEIVE_MESSAGE } from '../actions/message_actions';
 
 const messages_reducer = (state = {}, action) => {
   Object.freeze(state);
-  // console.log("hellooo");
   switch (action.type) {
     case RECEIVE_CHANNEL:
-      // let messages =
-      // if (!action.payload) {return state;}
-      // else{
       return action.payload.messages;
-      // }
     case RECEIVE_MESSAGE:
       return merge({}, state, {[action.payload.id]:action.payload})
     default:
