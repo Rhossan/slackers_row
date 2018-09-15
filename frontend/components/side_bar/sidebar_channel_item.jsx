@@ -1,10 +1,16 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
+import { NavLink } from 'react-router-dom'
+
 
 const ChannelItem = ({channel}) => {
   return (
     <li>
-     <Link to={`/main/${channel.id}`}> # {channel.name} </Link>
+     <NavLink activeStyle={{
+    fontWeight: 'bold',
+    color: '#FFF',
+    background: '#4C9689'
+   }} to={`/main/${channel.id}`}> # {channel.name} </NavLink>
     </li>
   );
 };
