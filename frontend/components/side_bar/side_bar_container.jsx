@@ -15,7 +15,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
-    requestAllChannels: () => dispatch(requestAllChannels())
+    requestAllChannels: () => dispatch(requestAllChannels()),
+    requestChannel: (id) => dispatch(requestChannel(id))
   };
 };
 
