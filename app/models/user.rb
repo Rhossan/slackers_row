@@ -6,17 +6,19 @@ class User < ApplicationRecord
 
   attr_reader :password
   after_initialize :ensure_session_token
-
+  after_create :subscribe_to_general
+  
   has_many :memberships,
     foreign_key: :owner_id
 
   has_many :channels,
     through: :memberships,
     source: :channel
-  #
-  # has_many :posts,
-  #   foreign_key: :post_id
-  ##******COME BACK TO THISSSS
+
+  def subscribe_to_general
+    general = Channel.find_by(name: "slackers unite!...tomorrow")
+    Membership.create!({ channel_id: general.id, user_id: self.id})
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

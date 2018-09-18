@@ -2,8 +2,7 @@ import {connect} from 'react-redux';
 import Sidebar from './side_bar';
 import {logout} from '../../actions/session_actions';
 import {selectAllChannels} from '../../reducers/selectors';
-import {requestAllChannels} from '../../actions/channel_actions';
-import {requestChannel} from '../../actions/channel_actions';
+import {requestAllChannels, requestChannel, makeChannel} from '../../actions/channel_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -16,7 +15,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
     requestAllChannels: () => dispatch(requestAllChannels()),
-    requestChannel: (id) => dispatch(requestChannel(id))
+    requestChannel: (id) => dispatch(requestChannel(id)),
+    createChannel: (channel) => dispatch(makeChannel(channel))
   };
 };
 
