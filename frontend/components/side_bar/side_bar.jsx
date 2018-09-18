@@ -23,7 +23,7 @@ class Sidebar extends Component{
       <div>
         <div className="sidebar">
           <a href="#">Welcome, {this.props.currentUser.username}</a>
-          <a href="#"><button onClick={this.logOutUser}>Log Out</button></a>
+          <a href="#" onClick={this.logOutUser}>Log Out</a>
           <div className="channel-div">
             <a href="#">Channels</a>
             <ul className="channel-list">
