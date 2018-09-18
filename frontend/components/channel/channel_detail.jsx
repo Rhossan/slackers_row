@@ -72,5 +72,4 @@ class ChannelDetail extends Component {
 
 };
 
-
 export default ChannelDetail;
