@@ -5,6 +5,7 @@ import Root from './components/root';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  const someCode = 110;
   const root = document.getElementById('root');
   let store;
   if (window.currentUser) {
