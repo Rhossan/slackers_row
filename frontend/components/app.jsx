@@ -14,9 +14,11 @@ import LoginFormContainer from './session_form/login_form_container'
 import SignupFormContainer from './session_form/signup_form_container'
 import SidebarContainer from './side_bar/side_bar_container';
 import ChannelDetailContainer from './channel/channel_detail_container';
+import ChannelModal from './modal/channel_modal';
 
 const App = () => (
   <div>
+    <ChannelModal />
     <header>
       <Link to="/" className="header-link">
       </Link>

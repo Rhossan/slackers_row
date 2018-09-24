@@ -10,7 +10,7 @@
     padding-top: 20px;
 }
 
-.sidebar a {
+.sidebar a, p {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
@@ -26,4 +26,9 @@
 
 ul.channel-list{
   padding-left: 15px;
+}
+
+.add-channel-icon {
+  margin-left: 25%;
+  font-size: 25px;
 }

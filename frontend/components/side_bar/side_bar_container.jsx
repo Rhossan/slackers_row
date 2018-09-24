@@ -3,6 +3,7 @@ import Sidebar from './side_bar';
 import {logout} from '../../actions/session_actions';
 import {selectAllChannels} from '../../reducers/selectors';
 import {requestAllChannels, requestChannel, makeChannel} from '../../actions/channel_actions';
+import {openModal, closeModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -16,7 +17,9 @@ const mapDispatchToProps = (dispatch) => {
     logout: () => dispatch(logout()),
     requestAllChannels: () => dispatch(requestAllChannels()),
     requestChannel: (id) => dispatch(requestChannel(id)),
-    createChannel: (channel) => dispatch(makeChannel(channel))
+    createChannel: (channel) => dispatch(makeChannel(channel)),
+    openModal: () => dispatch(openModal('channel')),
+    closeModal: () => dispatch(closeModal())
   };
 };
 

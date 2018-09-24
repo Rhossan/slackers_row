@@ -7,6 +7,7 @@ class Sidebar extends Component{
   constructor(props) {
     super(props);
     this.logOutUser = this.logOutUser.bind(this);
+    this.openThatModal = this.openThatModal.bind(this);
   }
   componentDidMount(){
     this.props.requestAllChannels();
@@ -15,6 +16,9 @@ class Sidebar extends Component{
   logOutUser(e) {
     this.props.logout().then(() => this.props.history.push('/login'));
   }
+  openThatModal(e){
+    this.props.openModal('channel')
+  }
   render() {
     const channels = this.props.channels.map(channel => {
         return <ChannelItem key={channel.id} channel={channel} />
@@ -22,10 +26,10 @@ class Sidebar extends Component{
     return (
       <div>
         <div className="sidebar">
-          <a href="#">Welcome, {this.props.currentUser.username}</a>
+          <p>Welcome, {this.props.currentUser.username}</p>
           <a href="#" onClick={this.logOutUser}>Log Out</a>
           <div className="channel-div">
-            <a href="#">Channels</a>
+            <a href="#" onClick={this.props.openModal}>Channels <span class='add-channel-icon'>&oplus;</span></a>
             <ul className="channel-list">
               {channels}
             </ul>
