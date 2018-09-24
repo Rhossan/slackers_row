@@ -29,7 +29,7 @@ class Sidebar extends Component{
           <p>Welcome, {this.props.currentUser.username}</p>
           <a href="#" onClick={this.logOutUser}>Log Out</a>
           <div className="channel-div">
-            <a href="#" onClick={this.props.openModal}>Channels <span class='add-channel-icon'>&oplus;</span></a>
+            <button onClick={this.openThatModal}>Channels &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
             <ul className="channel-list">
               {channels}
             </ul>

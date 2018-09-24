@@ -10,7 +10,9 @@ export default class CreateChannel extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let nextChId = this.props.channels[this.props.channels.length-1].id + 1;
     this.props.createChannel({name: this.state.name, owner_id: this.props.currentUser.id, channel_type:'channel'});
+    (this.props.closeModal()).then(this.props.history.push(`/main/${nextChId}`));
   }
 
   update(field){
@@ -44,7 +46,7 @@ export default class CreateChannel extends React.Component {
               >Cancel</button>
             <button
               className='button-submit'
-              onClick={this.props.handleSubmit}
+              onClick={this.handleSubmit}
               >Create Channel</button>
           </div>
         </form>
