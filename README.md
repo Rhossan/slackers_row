@@ -4,6 +4,8 @@
 
 Slackers-Row is a professional messaging app, cloned from Slack.
 
+![Splash-Screen](./app/assets/images/splash_screen_readme.pdf)
+
 ## Technologies
 
 * Ruby on Rails backend
