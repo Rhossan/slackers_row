@@ -12,6 +12,10 @@ Slackers-Row is a professional messaging app, cloned from Slack.
 * React/Redux
 * Websockets/Action Cable
 
+Login Authentication utilizes BCrypt(blowfish under the hood) to hash passwords and URLSafe_base64 encoding for session token
+
+![Login-Page](./app/assets/images/login_page_readme.png)
+
 ## ActionCable
 User can gain subscription to a channel, where messages created by other users will be broadcast
 ```
