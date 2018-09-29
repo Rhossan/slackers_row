@@ -4,7 +4,7 @@
 
 Slackers-Row is a professional messaging app, cloned from Slack.
 
-![Splash-Screen](./app/assets/images/splash_screen_readme.pdf)
+![Splash-Screen](./app/assets/images/splash_screen_readme.png)
 
 ## Technologies
 
