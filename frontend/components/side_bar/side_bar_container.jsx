@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
     requestAllChannels: () => dispatch(requestAllChannels()),
     requestChannel: (id) => dispatch(requestChannel(id)),
     createChannel: (channel) => dispatch(makeChannel(channel)),
-    openModal: () => dispatch(openModal('channel')),
+    openModal: (type) => dispatch(openModal(type)),
     closeModal: () => dispatch(closeModal())
   };
 };

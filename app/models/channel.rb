@@ -16,6 +16,11 @@ class Channel < ApplicationRecord
   through: :members,
   source: :membership
 
+  after_create :add_user_to_channel
 
+  def add_user_to_channel
+    user = User.find(self.owner_id)
+    Membership.create!({ channel_id: self.id, user_id: user.id})
+  end
 
 end

@@ -10,6 +10,7 @@
 Message.delete_all
 Channel.delete_all
 User.delete_all
+Membership.delete_all
 
 user = User.create!(
   username: "Demo_User",

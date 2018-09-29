@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import CreateChannelContainer from './create_channel_container';
+import CreateDMContainer from './create_dm_container';
 
 function ChannelModal({modal, closeModal}) {
   if (!modal) {
@@ -12,8 +13,8 @@ function ChannelModal({modal, closeModal}) {
     case 'channel':
       component = <CreateChannelContainer />;
       break;
-    case 'direct-message':
-      // component = <CreateDMContainer />;
+    case 'direct_message':
+      component = <CreateDMContainer />;
       break;
     default:
       return null;
