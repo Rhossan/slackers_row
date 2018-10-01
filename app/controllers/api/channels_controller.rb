@@ -1,12 +1,15 @@
 class Api::ChannelsController < ApplicationController
 
   def create
+    debugger
     @channel = Channel.new(channel_params)
 
     if @channel.save
-      params[:channel][:userIds].each do |user|
-        Membership.create!({ channel_id: @channel.id, user_id: user})
+      params[:channel][:userList].gsub(/\s+/, "").split(',').each do |user|
+        user = User.find_by(username: user)
+        Membership.create!({ channel_id: @channel.id, user_id: user.id})
       end
+
       Message.create! (
         {channel_id: @channel.id,
          body: "Let's talk about #{@channel.name}!",
@@ -21,7 +24,6 @@ class Api::ChannelsController < ApplicationController
   def show
     sleep 0.5
     @channel = Channel.find(params[:id])
-    # if user has never clicked on channel, add user as a member of channel
     ids = []
     @channel.members.each do |member|
       ids << member.user_id
@@ -43,6 +45,6 @@ class Api::ChannelsController < ApplicationController
   end
 
   def channel_params
-    params.require(:channel).permit(:name,:channel_type,:owner_id,:userIds)
+    params.require(:channel).permit(:name,:channel_type,:owner_id)
   end
 end

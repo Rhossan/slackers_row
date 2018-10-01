@@ -3,7 +3,7 @@ import React from 'react';
 export default class CreateDM extends React.Component {
   constructor(props){
     super(props);
-    this.state = {name: '', userIds: ''};
+    this.state = {name: '', userList: ''};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
@@ -11,7 +11,7 @@ export default class CreateDM extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let nextChId = this.props.channels[this.props.channels.length-1].id + 1;
-    this.props.createChannel({name: this.state.name, owner_id: this.props.currentUser.id, channel_type:'direct_message', userIds: this.state.userIds.split(',')});
+    this.props.createChannel({name: this.state.name, owner_id: this.props.currentUser.id, channel_type:'direct_message', userList: this.state.userList});
     this.props.closeModal();
     this.props.history.push(`/main/${nextChId}`);
   }
@@ -26,7 +26,6 @@ export default class CreateDM extends React.Component {
       <div className='contents'>
         <form>
           <h1>Create a DM</h1>
-          <h3>" are where your members communicate. They're best when organized around a topic - #leads, for example."</h3>
           <label>
             <h2>Name</h2>
             <div className='input-container'>
@@ -41,16 +40,16 @@ export default class CreateDM extends React.Component {
             </div>
           </label>
 
-          <h1>Add Members by id, spaced between</h1>
+          <h1>Add Members by name, spaced with a comma</h1>
           <label>
-            <h2>Name</h2>
+            <h2>Members</h2>
             <div className='input-container'>
 
                 <input
                   type='text'
-                  placeholder='23,28'
-                  value={this.state.userIds}
-                  onChange={this.update('userIds')}
+                  placeholder='Charlie, Drake'
+                  value={this.state.userList}
+                  onChange={this.update('userList')}
                 />
 
             </div>

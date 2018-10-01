@@ -6,7 +6,6 @@ import {requestAllChannels, requestChannel, makeChannel} from '../../actions/cha
 import {openModal, closeModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
-  debugger
   const currentUser = state.entities.users[state.session.id]
   const channels = selectAllChannels(state);
   let dms = channels.filter(channel => {
