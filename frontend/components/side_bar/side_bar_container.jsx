@@ -9,8 +9,9 @@ const mapStateToProps = (state) => {
   const currentUser = state.entities.users[state.session.id]
   const channels = selectAllChannels(state);
   let dms = channels.filter(channel => {
-    return (channel.members.some(e => currentUser.id) && (channel.channel_type == 'direct_message'));
+    return (channel.members.includes(e => currentUser.id) && (channel.channel_type == 'direct_message'));
   });
+  debugger
 
   const publicChannels = channels.filter(channel => channel.channel_type == 'channel');
   return {
