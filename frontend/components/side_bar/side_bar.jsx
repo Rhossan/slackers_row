@@ -24,8 +24,11 @@ class Sidebar extends Component{
     this.props.openModal('direct_message')
   }
   render() {
-    const channels = this.props.channels.map(channel => {
+    const publicChannels = this.props.publicChannels.map(channel => {
         return <ChannelItem key={channel.id} channel={channel} />
+      })
+    const dms = this.props.dms.map(channel => {
+      return <ChannelItem key={channel.id} channel={channel} />
       })
     return (
       <div>
@@ -34,9 +37,12 @@ class Sidebar extends Component{
           <a href="#" onClick={this.logOutUser}>Log Out</a>
           <div className="channel-div">
             <button onClick={this.openDMChannelModal}>DMChannels &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
+            <ul className='channel-list'>
+              {dms}
+            </ul>
             <button onClick={this.openPublicChannelModal}>Channels &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
             <ul className="channel-list">
-              {channels}
+              {publicChannels}
             </ul>
           </div>
         </div>

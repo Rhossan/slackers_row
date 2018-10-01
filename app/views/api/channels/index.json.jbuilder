@@ -2,5 +2,6 @@
   json.set! channel.id do
     json.extract! channel, :id, :name, :owner_id, :channel_type
     json.message_ids channel.messages.pluck(:id)
+    json.members channel.members.pluck(:user_id)
   end
 end
