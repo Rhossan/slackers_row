@@ -24,7 +24,7 @@ export default class CreateDM extends React.Component {
   render(){
     return (
       <div className='contents'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h1>Create a DM</h1>
           <label>
             <h2>Name</h2>
