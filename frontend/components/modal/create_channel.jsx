@@ -12,8 +12,9 @@ export default class CreateChannel extends React.Component {
     e.preventDefault();
     let nextChId = this.props.channels[this.props.channels.length-1].id + 1;
     this.props.createChannel({name: this.state.name, owner_id: this.props.currentUser.id, channel_type:'channel'});
-    this.props.closeModal();
-    this.props.history.push(`/main/${nextChId}`);
+    .then(channel => this.props.history.push(`/main/${channel.channel.channel.id}`))
+    .then(() => this.props.closeModal());
+
   }
 
   update(field){

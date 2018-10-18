@@ -17,13 +17,13 @@ export const requestChannel = (id) => dispatch => {
   };
 }
 
-export const makeChannel = (channel) => dispatch => {
-  return createChannel(channel).then(channel => {
-    return dispatch({type: RECEIVE_NEW_CHANNEL, channel});
-  }), err => {
-    return dispatch(receiveErrors(err.responseJSON));
+
+export const makeChannel = (channel) => {
+  return (dispatch) => {
+    return createChannel(channel)
+    .then(channel => dispatch({type: RECEIVE_NEW_CHANNEL, channel}));
   };
-}
+};
 
 export const requestAllChannels = () => dispatch => {
   return fetchAllChannels().then(channels => {
