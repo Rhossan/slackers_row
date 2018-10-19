@@ -34,7 +34,7 @@ class ChannelDetail extends Component {
   }
 
   render(){
-    const messages = this.props.messages.reverse().map(message => {
+    let messages = this.props.messages.map(message => {
         return message ?
         <div className="block_message" key={`${message.id}`}>
           <div className="header_message">
@@ -54,7 +54,7 @@ class ChannelDetail extends Component {
 
         </div> : ''
       });
-
+    
     return (
       <div>
         <div className="main">
