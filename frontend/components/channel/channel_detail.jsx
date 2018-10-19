@@ -17,6 +17,7 @@ class ChannelDetail extends Component {
 
 
  componentDidMount(){
+
    this.props.requestChannel(this.props.match.params.channelId);
    this.subscription = App.cable.subscriptions.create(
      {channel: 'ChatChannel', id: this.props.match.params.channelId},
