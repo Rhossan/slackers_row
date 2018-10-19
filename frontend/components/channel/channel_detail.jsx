@@ -35,7 +35,7 @@ class ChannelDetail extends Component {
   render(){
     const messages = this.props.messages.map(message => {
         return message ?
-        <div className="block_message">
+        <div className="block_message" key={`${message.id}`}>
           <div className="header_message">
             <div className="profile_pic"></div>
             <div className="body_content">
