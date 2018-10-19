@@ -5,7 +5,7 @@ json.channel do
 end
 
 json.messages do
-  @channel.messages.map do |message|
+  @channel.messages.order('created_at ASC').map do |message|
     json.set! message.id do
       json.partial! 'api/messages/message', message: message
     end
