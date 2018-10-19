@@ -7,6 +7,11 @@ export const receiveMessage = (payload) => {
   return {type: RECEIVE_MESSAGE, payload};
 };
 
+// export const makeMessage = (message) => dispatch => {
+//   return createMessage(message)
+// }
+
 export const makeMessage = (message) => dispatch => {
-  return createMessage(message)
-}
+    return createMessage(message)
+    .then(payload => dispatch({type: RECEIVE_MESSAGE, payload}));
+};
