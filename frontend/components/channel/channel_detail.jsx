@@ -54,7 +54,7 @@ class ChannelDetail extends Component {
 
         </div> : ''
       });
-    
+
     return (
       <div>
         <div className="main">
