@@ -44,7 +44,13 @@ class SessionForm extends React.Component {
     }
     return (
   <div>
-    <div className="image-logo-login"></div>
+    <nav className="navbar session-navbar">
+      <div className="image-logo-login"></div>
+      <ul>
+        <li> <a href='#/login' className='session-navbar-button'>Sign In</a></li>
+        <li> <a href='#/signup' className='session-navbar-button'>Sign Up</a></li>
+      </ul>
+    </nav>
     <div className="login">
 
       <div className="login-form-container">

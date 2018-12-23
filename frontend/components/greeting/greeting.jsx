@@ -31,9 +31,9 @@ class Greeting extends React.Component {
                 measure an A/B test, plan your next office opening, and more, Slackers-row can
                 kinda, sorta, maybe, have you covered. But what do I know, I am just a voice in your head.
               </p>
-              <p className="splash-login">
-                Click here to <Link id="link-splash" to="/login"><b>begin</b></Link>
-              </p>
+              <a href='#/login' className='get-started-button'>
+                Get Started
+              </a>
             </div>
           </div>
 
