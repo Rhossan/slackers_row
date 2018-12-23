@@ -7,7 +7,6 @@ const ChannelItem = ({channel}) => {
   return (
     <li>
      <NavLink activeStyle={{
-    fontWeight: 'bold',
     color: '#FFF',
     background: '#4C9689'
    }} to={`/main/${channel.id}`}> # {channel.name} </NavLink>

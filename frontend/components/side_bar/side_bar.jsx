@@ -36,13 +36,14 @@ class Sidebar extends Component{
           <p>Welcome, {this.props.currentUser.username}</p>
           <a href="#" className='log-out-style'onClick={this.logOutUser}>Log Out</a>
           <div className="channel-div">
-            <button onClick={this.openDMChannelModal}>DMChannels &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
-            <ul className='channel-list'>
-              {dms}
-            </ul>
             <button onClick={this.openPublicChannelModal}>Channels &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
             <ul className="channel-list">
               {publicChannels}
+            </ul>
+
+            <button onClick={this.openDMChannelModal}>Direct Messages &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
+            <ul className='channel-list'>
+              {dms}
             </ul>
           </div>
         </div>
