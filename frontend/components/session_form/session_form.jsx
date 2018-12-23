@@ -80,13 +80,22 @@ class SessionForm extends React.Component {
               />
             </label>
 
-            <label className="label-login">
-              <input className="session-submit" type="submit" value={this.props.formType} />
-            </label>
 
-          </div>
-          <div><h1 id="signup_header">You can <span>{this.props.navLink}</span></h1>
-            <button className="demo-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>DEMO USER</button>
+            <ul className='session-button-container'>
+              <li>
+                <label className="label-login">
+                  <button className="session-submit" type="submit">{this.props.formType}</button>
+                </label>
+              </li>
+              <li>Or</li>
+              <li>
+                <label className='label-login'>
+                  <button className="guest-session-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>Demo User</button>
+                </label>
+              </li>
+            </ul>
+
+
           </div>
         </form>
 
@@ -97,5 +106,14 @@ class SessionForm extends React.Component {
     );
   }
 }
+
+// <label className="label-login">
+//   <input className="session-submit" type="submit" value={this.props.formType} />
+// </label>
+// <p>Or</p>
+// <label className='label-login'>
+//   <button className="session-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>DEMO USER</button>
+// </label>
+
 
 export default withRouter(SessionForm);
