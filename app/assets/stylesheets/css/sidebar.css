@@ -1,3 +1,5 @@
+
+
 .sidebar {
     height: 100%;
     width: 220px;
@@ -10,15 +12,27 @@
     padding-top: 20px;
 }
 
-.sidebar a, p, button {
+.sidebar p, button {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     color: floralwhite;
     display: block;
     font-family: 'Lato', sans-serif;
 }
 
+.sidebar a{
+  padding: 6px 8px 6px 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(202,196,201);
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+.log-out-style{
+  padding: 6px 8px 6px 16px !important;
+}
 
 .sidebar a:hover {
     background: #947791;

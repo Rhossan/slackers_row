@@ -34,7 +34,7 @@ class Sidebar extends Component{
       <div>
         <div className="sidebar">
           <p>Welcome, {this.props.currentUser.username}</p>
-          <a href="#" onClick={this.logOutUser}>Log Out</a>
+          <a href="#" className='log-out-style'onClick={this.logOutUser}>Log Out</a>
           <div className="channel-div">
             <button onClick={this.openDMChannelModal}>DMChannels &nbsp; &nbsp; <span className='add-channel-icon'>&oplus;</span></button>
             <ul className='channel-list'>
