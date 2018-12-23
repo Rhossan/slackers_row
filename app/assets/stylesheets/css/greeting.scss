@@ -1,14 +1,42 @@
-.navbar{
-    position: absolute;
-    padding: 0;
-    height: 70px;
-    background-color: #fff;
-    border-bottom: 1px solid #ebebeb;
-    z-index: 1000;
-    top: 0;
-    position: fixed;
-    width: 100%;
+.greeting_container{
+
 }
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.navbar ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+  justify-content: space-around;
+  align-items: center;
+  color: #6d6f7b;
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar ul li:hover{
+  color: #323648;
+}
+// .navbar{
+//     position: absolute;
+//     padding: 0;
+//     height: 70px;
+//     background-color: #fff;
+//     border-bottom: 1px solid #ebebeb;
+//     z-index: 1000;
+//     top: 0;
+//     position: fixed;
+//     width: 100%;
+// }
 
 #link-splash{
   color: blue;
@@ -51,20 +79,32 @@
   max-width: 14em;
 }
 .splash-body{
-  display: inline-block;
-  margin-left: 100px;
+  // display: inline-block;
+  // margin-left: 100px;
+  // display: flex;
+  // flex-direction: row;
+
 }
 .splash-content{
-  margin-top: 200px;
+  margin-top: 50px;
   display: flex;
 
 }
 .splash-image{
-    display: inline-block;
+    // display: inline-block;
     height: 600px;
     width: 700px;
     // border-top: 200px;
-    background-image: image-url("home.png");
+    background: image-url("home.png");
+    background-repeat: no-repeat;
+    background-size: auto;
     position: relative;
     bottom: 0px;
+}
+
+.navbar .image-logo-login{
+  position: relative;
+  // float: left;
+  height: 80px;
+  width: 270px;
 }
