@@ -1,4 +1,5 @@
 import React from 'react';
+import Select from 'react-select';
 
 export default class CreateDM extends React.Component {
   constructor(props){
@@ -11,7 +12,6 @@ export default class CreateDM extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let nextChId = this.props.channels[this.props.channels.length-1].id + 1;
-    let id;
     this.props.createChannel({name: this.state.name, owner_id: this.props.currentUser.id, channel_type:'direct_message', userList: this.state.userList})
     .then(channel => this.props.history.push(`/main/${channel.channel.channel.id}`))
     .then(() => this.props.closeModal());
@@ -23,6 +23,12 @@ export default class CreateDM extends React.Component {
 
 
   render(){
+    debugger;
+    let users = this.props.channels[this.props.channels.length-1];
+    const userOptions = users.map(user => {
+      return {value: user, label: user}
+    })
+    console.log(userOptions);
     return (
       <div className='contents'>
         <form onSubmit={this.handleSubmit}>
@@ -44,17 +50,19 @@ export default class CreateDM extends React.Component {
           <h1>Add Members by name, spaced with a comma</h1>
           <label>
             <h2>Members</h2>
-            <div className='input-container'>
 
-                <input
-                  type='text'
-                  placeholder='Charlie, Drake'
-                  value={this.state.userList}
-                  onChange={this.update('userList')}
-                />
-
-            </div>
+            {// <input
+                //   type='text'
+                //   placeholder='Charlie, Drake'
+                //   value={this.state.userList}
+                //   onChange={this.update('userList')}
+                // />
+              }
+              <div>
+                <Select options={userOptions} isMulti className='dropdown-users'/>
+              </div>
           </label>
+
           <div className='button-container'>
             <button
               className='button-cancel'

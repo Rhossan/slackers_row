@@ -11,15 +11,21 @@
     margin: 0 auto;
     /* opacity: .7; */
 }
-.modal-child div {
+/* .modal-child div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
+} */
 .modal-child form {
   margin: 0 auto;
   font-size: 40px;
   font-weight: 700;
+}
+.modal-child h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c2e30;
+  margin-top: 20px;
 }
 .modal-child h2 {
   font-size: 17px;
@@ -48,6 +54,18 @@
   padding: 0 15px 0 10px;
   box-sizing: border-box;
   font-size: 20px;
+}
+
+.dropdown-users{
+  height: 40px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .modal-child .button-container {

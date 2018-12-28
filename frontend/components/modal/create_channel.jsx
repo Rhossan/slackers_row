@@ -27,7 +27,7 @@ export default class CreateChannel extends React.Component {
       <div className='contents'>
         <form>
           <h1>Create a Channel</h1>
-          <h3>"Channels are where your members communicate. They're best when organized around a topic - #leads, for example."</h3>
+          <h3>Channels are where your members communicate. They are best when organized around a topic - #leads, for example.</h3>
           <label>
             <h2>Name</h2>
             <div className='input-container'>

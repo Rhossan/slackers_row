@@ -5,7 +5,7 @@ import merge from 'lodash/merge';
 
 const channelReducer = (state = {}, action) => {
   let channel;
-
+  debugger;
   switch (action.type) {
     case RECEIVE_ALL_CHANNELS:
       return merge({}, state, action.channels)

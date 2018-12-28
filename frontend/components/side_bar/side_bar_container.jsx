@@ -7,7 +7,7 @@ import {openModal, closeModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
   const currentUser = state.entities.users[state.session.id]
-  const channels = selectAllChannels(state);
+  const channels = selectAllChannels(state).slice(0,-1);
   let dms = channels.filter(channel => {
     return (channel.members.includes(currentUser.id) && (channel.channel_type == 'direct_message'));
   });

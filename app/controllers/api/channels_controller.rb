@@ -36,7 +36,7 @@ class Api::ChannelsController < ApplicationController
 
   def index
     @channels = Channel.all
-    # @users = User.all
+    @users = User.all
   end
 
   def destroy
