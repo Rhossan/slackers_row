@@ -36,12 +36,12 @@ class Api::ChannelsController < ApplicationController
 
   def index
     @channels = Channel.all
+    # @users = User.all
   end
 
   def destroy
     @channel = Channel.find(params[:id])
     @channel.destroy
-
     render :show
   end
 

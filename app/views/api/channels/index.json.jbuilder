@@ -5,3 +5,11 @@
     json.members channel.members.pluck(:user_id)
   end
 end
+
+# json.users @users.pluck(:username)
+# json.users do
+#   # json.array!(@users) do |user|
+#   #   json.username user.username
+#   # end
+#   User.pluck :name
+# end
