@@ -37,12 +37,10 @@ class SessionForm extends React.Component {
   }
 
   render(){
-    const loginTemplate = () => {
-      return (
-        <h1>ss</h1>
-      );
-    }
+
+    let {formType} = this.props;
     return (
+
   <div>
     <nav className="navbar session-navbar">
       <div className="image-logo-login"></div>
@@ -87,12 +85,19 @@ class SessionForm extends React.Component {
                   <button className="session-submit" type="submit">{this.props.formType}</button>
                 </label>
               </li>
-              <li>Or</li>
-              <li>
-                <label className='label-login'>
-                  <button className="guest-session-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>Demo User</button>
-                </label>
-              </li>
+              {
+                  formType === 'Sign in' ?
+                  <div>
+                    <li id='or-label'>Or</li>
+                    <li>
+                      <label className='label-login'>
+                        <button className="guest-session-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>Demo User</button>
+                      </label>
+                    </li>
+                  </div>
+                  : ''
+              }
+
             </ul>
 
 
@@ -106,14 +111,5 @@ class SessionForm extends React.Component {
     );
   }
 }
-
-// <label className="label-login">
-//   <input className="session-submit" type="submit" value={this.props.formType} />
-// </label>
-// <p>Or</p>
-// <label className='label-login'>
-//   <button className="session-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>DEMO USER</button>
-// </label>
-
 
 export default withRouter(SessionForm);
