@@ -1,12 +1,14 @@
 import React from 'react';
 import Select from 'react-select';
 
+// must handle if no one is selected and userList is empty
 export default class CreateDM extends React.Component {
   constructor(props){
     super(props);
-    this.state = {name: '', userList: ''};
+    this.state = {name: '', userList: []};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(e) {
@@ -21,14 +23,19 @@ export default class CreateDM extends React.Component {
     return e => this.setState({[field]: e.currentTarget.value});
   }
 
+  handleChange(e){
+    this.setState({
+        userList:[].slice.call(e).map(o => {
+            return o.value;
+        })})
+  }
+
 
   render(){
-    debugger;
     let users = this.props.channels[this.props.channels.length-1];
     const userOptions = users.map(user => {
       return {value: user, label: user}
-    })
-    console.log(userOptions);
+    });
     return (
       <div className='contents'>
         <form onSubmit={this.handleSubmit}>
@@ -47,7 +54,7 @@ export default class CreateDM extends React.Component {
             </div>
           </label>
 
-          <h1>Add Members by name, spaced with a comma</h1>
+          <h1>Add Members by name</h1>
           <label>
             <h2>Members</h2>
 
@@ -59,7 +66,9 @@ export default class CreateDM extends React.Component {
                 // />
               }
               <div>
-                <Select options={userOptions} isMulti className='dropdown-users'/>
+                <Select options={userOptions} isMulti className='dropdown-users'
+                  onChange={this.handleChange}
+                  />
               </div>
           </label>
 
