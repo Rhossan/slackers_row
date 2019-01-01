@@ -12,6 +12,10 @@
   end
 end
 
+
+# json.users @users do |user|
+#   json.set! user.id, user.username
+# end
 json.users @users.pluck(:username)
 
 # json.users do

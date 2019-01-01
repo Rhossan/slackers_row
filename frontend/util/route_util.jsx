@@ -30,7 +30,7 @@ const RedirectToGeneral = ({path, exact, generalId}) => (
 
 
 const mapStateToProps = state => {
-  return {loggedIn: Boolean(state.session.id), generalId: 7};
+  return {loggedIn: Boolean(state.session.id), generalId: 13};
 };
 
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));

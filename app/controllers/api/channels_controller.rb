@@ -4,7 +4,7 @@ class Api::ChannelsController < ApplicationController
     @channel = Channel.new(channel_params)
     if @channel.save
       #if channel type is channel, or no userlist, we get an internal server error caused by undefined method `gsub'
-      # debugger
+      
       # if @channel.channel_type == "direct_message"
       #   params[:channel][:userList].gsub(/\s+/, "").split(',').each do |user|
       #     user = User.find_by(username: user)

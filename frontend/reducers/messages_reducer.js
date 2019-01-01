@@ -7,7 +7,6 @@ const messages_reducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CHANNEL:
-      debugger;
       return action.payload.messages;
       // || null;
     case RECEIVE_MESSAGE:

@@ -33,7 +33,9 @@ export default class CreateDM extends React.Component {
 
   render(){
     let users = this.props.channels[this.props.channels.length-1];
-    const userOptions = users.map(user => {
+    let {currentUser} = this.props;
+    users = users.filter(el => el !== currentUser.username);
+    let userOptions = users.map(user => {
       return {value: user, label: user}
     });
     return (
