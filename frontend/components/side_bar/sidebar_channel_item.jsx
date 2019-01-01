@@ -4,8 +4,9 @@ import { NavLink } from 'react-router-dom'
 
 
 const ChannelItem = ({channel}) => {
+
   let usernames = [];
-  if ((channel.channel_type === 'direct_message') && (channel.usernames)){
+  if (channel.channel_type === 'direct_message'){
     for(let i = 0; i < channel.usernames.length; i++){
       usernames.push(Object.values(channel.usernames[i])[0]);
     }
