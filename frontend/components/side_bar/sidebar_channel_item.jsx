@@ -16,8 +16,7 @@ const ChannelItem = ({channel}) => {
      <NavLink activeStyle={{
     color: '#FFF',
     background: '#4C9689'
-  }} to={`/main/${channel.id}`}> #
-  {
+  }} to={`/main/${channel.id}`}> # {
     channel.channel_type === 'direct_message' ? usernames : channel.name
   } </NavLink>
     </li>
