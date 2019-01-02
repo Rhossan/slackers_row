@@ -12,6 +12,8 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.processGuest = this.processGuest.bind(this);
+    this.processHelper = this.processHelper.bind(this);
   }
 
   handleSubmit(e) {
@@ -22,6 +24,36 @@ class SessionForm extends React.Component {
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
+  }
+
+  processGuest(){
+    const button = document.getElementById('session-submit');
+    const username = "Demo_User".split('');
+    const password = "password".split('');
+    this.setState({username: '', password: ''}, () =>
+      this.processHelper(username, password, button)
+    );
+    // {this.props.processForm({username: "Demo_User", password: "password"})}
+  }
+
+  processHelper(username, password, button){
+    if (username.length > 0) {
+      this.setState(
+        { username: this.state.username + username.shift() }, () => {
+          window.setTimeout( () =>
+            this.processHelper(username, password, button), 75);
+        }
+      );
+    } else if (password.length > 0) {
+      this.setState(
+        { password: this.state.password + password.shift() }, () => {
+          window.setTimeout( () =>
+            this.processHelper(username, password, button), 75);
+        }
+      );
+    } else {
+      button.click();
+    }
   }
 
   renderErrors() {
@@ -82,28 +114,26 @@ class SessionForm extends React.Component {
             <ul className='session-button-container'>
               <li>
                 <label className="label-login">
-                  <button className="session-submit" type="submit">{this.props.formType}</button>
+                  <button id="session-submit" type="submit">{this.props.formType}</button>
                 </label>
               </li>
-              {
-                  formType === 'Sign in' ?
-                  <div>
-                    <li id='or-label'>Or</li>
-                    <li>
-                      <label className='label-login'>
-                        <button className="guest-session-submit" onClick={() => {this.props.processForm({username: "Demo_User", password: "password"})}}>Demo User</button>
-                      </label>
-                    </li>
-                  </div>
-                  : ''
-              }
-
             </ul>
-
-
           </div>
         </form>
-
+        <ul className='guest-button-container'>
+          {
+              formType === 'Sign in' ?
+              <div>
+                <li id='or-label'>Or</li>
+                <li>
+                  <label className='label-login'>
+                    <button className="guest-session-submit" onClick={this.processGuest}>Demo User</button>
+                  </label>
+                </li>
+              </div>
+              : ''
+          }
+        </ul>
       </div>
     </div>
 

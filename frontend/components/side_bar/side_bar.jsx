@@ -17,7 +17,7 @@ class Sidebar extends Component{
   logOutUser(e) {
     // .then(() => this.props.history.push('/login'));
     this.props.logout();
-    this.props.history.push('/login');
+    // this.props.history.push('/login');
   }
   openPublicChannelModal(e){
     this.props.openModal('channel')

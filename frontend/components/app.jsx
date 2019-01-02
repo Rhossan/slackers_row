@@ -25,16 +25,13 @@ const App = () => (
     </header>
 
 
-    <Switch>
-      <AuthRoute exact path="/" component={GreetingContainer} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute path="/main" component={SidebarContainer}/>
-  </Switch>
-  <ProtectedRoute path="/main/:channelId" component={ChannelDetailContainer}/>
-
+    <Route exact path="/" component={GreetingContainer} />
+    <AuthRoute exact path="/login" component={LoginFormContainer} />
+    <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <ProtectedRoute exact path="/main/:channelId" componentFirst={ChannelDetailContainer} componentSecond={SidebarContainer}/>
 
   </div>
 );
+// <ProtectedRoute path="/main" component={SidebarContainer}/>
 
 export default App;
